@@ -1,0 +1,22 @@
+START
+    DECLARE String modelName
+    DECLARE Float heightInches, widthInches, depthInches, capacityCubicFeet
+    CONSTANT Float CUBIC_INCHES_PER_CUBIC_FOOT = 1728
+
+    PROMPT "Enter the refrigerator model name:" 
+    INPUT modelName
+
+    PROMPT "Enter the interior height in inches:" 
+    INPUT heightInches
+
+    PROMPT "Enter the interior width in inches:" 
+    INPUT widthInches
+
+    PROMPT "Enter the interior depth in inches:" 
+    INPUT depthInches
+
+    SET capacityCubicFeet = (heightInches * widthInches * depthInches) / CUBIC_INCHES_PER_CUBIC_FOOT
+
+    PRINT "Refrigerator Model: ", modelName
+    PRINT "Capacity in cubic feet: ", capacityCubicFeet
+END
